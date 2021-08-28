@@ -1,9 +1,11 @@
+import * as S from './styled';
+
 function Layout({ children }) {
   return (
-    <section>
+    <S.WrapperLayout>
       <header>Header</header>
       {children}
-    </section>
+    </S.WrapperLayout>
   );
 }
 

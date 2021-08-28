@@ -1,6 +1,9 @@
+import useGithub from '../../hooks/github-hooks';
 import * as S from './styled';
 
 function Profile() {
+  const { githubState } = useGithub();
+
   return (
     <S.Wrapper>
       <S.WrapperImage
@@ -9,10 +12,16 @@ function Profile() {
       />
       <S.WrapperInfoUser>
         <div>
-          <h1>Caio Hatai</h1>
+          <h1>{githubState.user.name}</h1>
           <S.WrapperUsername>
             <h3>Username: </h3>
-            <span>caioharuo</span>
+            <a
+              href="https://github.com/caioharuo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              caioharuo
+            </a>
           </S.WrapperUsername>
         </div>
         <S.WrapperStatusCount>
@@ -21,7 +30,7 @@ function Profile() {
             <span>1</span>
           </div>
           <div>
-            <h4>Starreds</h4>
+            <h4>Starred</h4>
             <span>1</span>
           </div>
           <div>
