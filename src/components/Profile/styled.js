@@ -33,13 +33,15 @@ export const WrapperStatusCount = styled.div`
   display: flex;
   align-items: center;
 
+  margin-top: 8px;
+
   div {
     margin: 8px;
     text-align: center;
   }
 `;
 
-export const WrapperUsername = styled.div`
+export const WrapperUserGeneric = styled.div`
   display: flex;
   align-items: center;
   margin-top: 8px;
@@ -63,5 +65,5 @@ export const WrapperUsername = styled.div`
 export const WrapperImage = styled.img`
   border-radius: 50%;
   width: 200px;
-  margin: 8px;
+  margin-right: 16px;
 `;
